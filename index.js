@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 require('dotenv').config();
 const express = require('express');
 const colors = require('colors');
@@ -16,6 +17,8 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 app.use('/', require('./routes/ApplicationRoutes'));
 app.use('/api', require('./routes/DataRoutes'));
 
-app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Server Started and running on PORT : ${String(process.env.SERVER_PORT).red.bold}`);
-});
+// app.listen(process.env.SERVER_PORT, () => {
+//   console.log(`Server Started and running on PORT : ${String(process.env.SERVER_PORT).red.bold}`);
+// });
+
+module.exports = app;
