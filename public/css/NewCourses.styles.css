@@ -1,3 +1,6 @@
-body {
-    background-color: blueviolet;
+.main-container {
+    width          : 100vw;
+    display        : flex;
+    justify-content: center;
+
 }
