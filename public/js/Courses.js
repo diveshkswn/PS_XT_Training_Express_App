@@ -7,7 +7,7 @@ async function loadData() {
   const data = await res.json();
   data.forEach((course) => {
     const newElement = document.createElement('div');
-    newElement.innerHTML = getCardTemplate(course.title, course.price, course.likes, course.rating, course.imageUrl);
+    newElement.innerHTML = getCardTemplate(course.id, course.title, course.price, course.likes, course.rating, course.imageUrl);
 
     // let newElement = document.createElement("div").innerHTML()
     document.querySelector('.main-container').appendChild(newElement);

@@ -1,5 +1,6 @@
+/* eslint-disable prefer-const */
 /* eslint-disable import/prefer-default-export */
-const courses = [
+let courses = [
   {
     id: 1,
     title: 'React',

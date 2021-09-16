@@ -12,4 +12,11 @@ route.post('/newCourse', (req, res) => {
   courseList.push({ ...req.body, id: Math.floor(Math.random() * 1000) });
   res.status(200).json({ success: 'true', data: req.body });
 });
+
+route.get('/deleteCourse/:id', (req, res) => {
+  const idToDelete = req.params.id;
+
+  courseList.splice(courseList.findIndex((i) => i.id === Number(idToDelete)), 1);
+  res.redirect('/');
+});
 module.exports = route;
